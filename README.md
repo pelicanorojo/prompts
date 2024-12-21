@@ -1,2 +1,2 @@
 # prompts
-Prompts and their answers from some LLms
+Prompts and their answers from some LLMs
