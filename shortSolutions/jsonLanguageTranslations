@@ -1,0 +1,9 @@
+The prompt done to Claude:
+
+I have a json with some root structure, one of its root properties is a array, and the array has on each object, properties which are some text or number, and also another array.
+I would like you do for me, a single file node app, for pass in a var the input filename json, the output filename json, and using the google translation api, generate the same json structure, but with some of the properties and deep properties, translated to a selected input language (english for instance).
+Also generate a way to specify which properties or deep properties to translate, for instance an array like:
+[
+"aRootTextProperty",
+"aDeeepArrayProperty[].otherArray[].theDeepProperty"
+]
