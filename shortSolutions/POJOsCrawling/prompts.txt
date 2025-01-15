@@ -1,0 +1,35 @@
+Prompt 1 to Claude:
+
+Suppose I have a POJO with an arbitrary shape, which can have consecutive or not consecutive nested arrays. like (omitting the "s) {a: [{b:[]}, {b:[]}]} or {a: [{b:{c:[]}}, {b: {c: []}}]}
+
+And suppose I specify paths for these POJOs, for pick some deep or not deep properties values. like:
+
+  '["title","items[].description","items[].subItems[].name"]'
+
+Do please a recursive snipped so for each path, populate a POJOs property with this output:
+I want for each path description, be generated:
+* if a root property: title: {d: 0, v: theValue}
+* if a deep property like "items[].description": "items[].description" = an array where for each items[i].property is generated
+* if a deep property like "items[].subItems[].name": a flat array [i], where for each nested j, k item we have  {d: 2, i: i, j:j, value}
+
+so the output could be something like:
+{
+title: {d:0, v: theValue}
+}
+
+Prompt 2 to Claude:
+
+cool, now using this paths descriptions, and the result of above,
+do other script for reconstruct the object for the given paths, so are used the the path name, and flat elements dimensions and indexes for reconstruct an object for the paths described.
+
+Prompt 3 to Claude:
+
+Could you add tested for both, the object crawler, and the object constructor examples you did?
+
+Prompt 4 to Calude:
+
+could you generate me a package.json for these two scripts and the tests, as if were just one project?
+
+Prompt 5 to Geminy:
+
+Can you translate next code for be used with jest?
